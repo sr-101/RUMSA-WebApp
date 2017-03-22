@@ -1,0 +1,162 @@
+/*!
+ * Start Bootstrap - Creative v3.3.7+1 (http://startbootstrap.com/template-overviews/creative)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.hr-short {
+	border-width: 3px;
+	max-width: 50px;
+}
+
+a {
+	-webkit-transition: all 0.35s;
+	-moz-transition: all 0.35s;
+	transition: all 0.35s;
+	cursor:pointer;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+/* section {
+	padding: 50px 50px 0px;
+} */
+
+nav {
+	background-color: #ffffff;
+}
+
+header {
+	position: relative;
+	width: 100%;
+	min-height: auto;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	background-position: center;
+	color: black;
+}
+
+header .header-content {
+	position: relative;
+	padding: 80px 15px 0px;
+	width: 100%;
+}
+
+header .header-content .header-content-inner p {
+	font-weight: 300;
+	color: black; font-size : 16px;
+	font-size: 16px;
+}
+
+.card-deck > .card
+{
+        width: 29%;
+        flex-wrap: wrap;
+        flex: auto;
+        max-width: 100%; 
+}
+
+.card-deck > .card.prayer
+{
+        width: 20%;
+        flex-wrap: wrap;
+        flex: auto;
+        max-width: 100%; 
+}
+
+.section-heading {
+	margin-top: 0;
+	text-align: center;
+}
+
+section {
+	text-align: center; margin-top : 0;
+	margin: auto;
+	margin-top: 0;
+}
+
+.btn {
+	color: #222222;
+	background-color: white;
+	border-color: #f2f2f2;
+	-webkit-transition: all 0.35s;
+	-moz-transition: all 0.35s;
+	transition: all 0.35s;
+}
+
+.btn:hover, .btn:focus, .btn.focus, .btn:active, .btn.active, .open>.dropdown-toggle.btn-default
+	{
+	color: #222222;
+	background-color: #f2f2f2;
+	border-color: #ededed;
+}
+
+.btn {
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+	border-radius: 300px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.btn-xl {
+	padding: 15px 30px;
+}
+
+::-moz-selection {
+	color: white;
+	text-shadow: none;
+	background: #222222;
+}
+
+::selection {
+	color: white;
+	text-shadow: none;
+	background: #222222;
+}
+
+img::selection {
+	color: white;
+	background: transparent;
+}
+
+img::-moz-selection {
+	color: white;
+	background: transparent;
+}
+
+body {
+	background-image: url('/img/background2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.nav-tabs{float:left;padding-bottom:25px;padding-right:5px;}
+
+img {max-width: 100%;}
+
+.modal-dialog {
+  min-width: 85%;
+}
+
+.tab-heading{
+    border-left: 6px solid #f2f2f2;
+}
+
+.uib-tab.active a {
+	border: none;
+    border-left: 6px solid #d9d9d9;
+}

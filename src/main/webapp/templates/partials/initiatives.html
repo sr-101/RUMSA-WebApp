@@ -1,0 +1,95 @@
+<div class="container-fluid">
+	<header>
+		<div class="header-content" style="padding-bottom: 0px">
+			<div class="header-content-inner">
+				<h3 class="display-5">Initiatives</h3>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<uib-tabset vertical="true" active="active" class="tabs-left">
+	<uib-tab class="tab-heading" index="$index + 1" ng-repeat="i in vm.initiatives">
+	<uib-tab-heading> 
+	{{i.name}} 
+	<uib-tab ng-if="i.extra && (i.id!=6 && i.id!=7)" heading="{{i.extra}}"></uib-tab>
+	<uib-tab ng-if="i.extra && i.id==6" heading=">&nbsp;{{i.extra}}" select="vm.getStuff()">
+	<h5 class="display-5 text-xs-center">Ladders Resources</h5>
+	<hr class="hr-short">
+	<div class="text-xs-center" ng-if="vm.templist">
+		<button type="button" class="btn btn-secondary btn-sm" ng-click="vm.back()">Back</button>
+		<br>
+		<br>
+	</div>
+	<ul class="list-group row">
+		<li class="list-group-item col-xs-12" ng-repeat="j in vm.files">
+			<a href="#" ng-click="vm.getStuff2(j.id)" ng-if="j.mimeType=='application/vnd.google-apps.folder'">
+				<h5 class="mb-1" ng-if="j.mimeType=='application/vnd.google-apps.folder'">
+					<i class="fa fa-folder-o"></i>&nbsp;{{j.name}}
+				</h5>
+			</a> 
+		<a href="" ng-click="vm.fopen(j.id,j.name)" ng-if="j.mimeType!='application/vnd.google-apps.folder'">
+				<h5 class="mb-1" ng-if="j.mimeType=='application/pdf'">
+					<i class="fa fa-file-pdf-o"></i>&nbsp;{{j.name}}
+				</h5>
+				<h5 class="mb-1" ng-if="j.mimeType!='application/pdf' && j.mimeType!='application/vnd.google-apps.folder'">
+					<i class="fa fa-file-o"></i>&nbsp;{{j.name}}
+				</h5>
+		</a> 
+		<small>{{j.description}}</small>
+		</li>
+	</ul>
+	</uib-tab> 
+	<uib-tab ng-if="i.extra && i.id==7" heading=">&nbsp;{{i.extra}}"
+		select="vm.open()">
+	<h5 class="display-5 text-xs-center">{{i.name}}</h5>
+	<hr class="hr-short">
+	<p>{{i.description}}</p>
+	<hr class="hr-short">
+	<div class="container-fluid" style="padding-bottom: 25px;">
+		<div class="card-deck">
+			<div
+				class="card text-xs-center col-lg-4 col-md-6 col-sm-12 col-xs-12"
+				ng-repeat="s in i.members">
+				<img class="card-img-top" ng-src={{s.img}} alt="Card image cap"
+					style="height: 200px">
+				<div class="card-block">
+					<h4 class="card-title">{{s.position}}</h4>
+					<h5 class="card-subtitle text-muted">{{s.name}}</h5>
+					<p class="card-text" ng-show="{{s.email}}">
+						Contact: <small class="text-muted"><a target="_blank"
+							href=https://mail.google.com/mail/?view=cm&fs=1&to={{s.email}}>{{s.email}}</a></small>
+					</p>
+					<hr class="hr-short">
+					<p class="card-text">{{s.bio}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</uib-tab> 
+	</uib-tab-heading>
+	<h5 class="display-5 text-xs-center">{{i.name}}</h5>
+	<hr class="hr-short">
+	<p>{{i.description}}</p>
+	<hr class="hr-short">
+	<div class="container-fluid" style="padding-bottom: 25px;">
+		<div class="card-deck">
+			<div
+				class="card text-xs-center col-lg-4 col-md-6 col-sm-12 col-xs-12"
+				ng-repeat="s in i.members">
+				<img class="card-img-top" ng-src={{s.img}} alt="Card image cap"
+					style="height: 200px">
+				<div class="card-block">
+					<h4 class="card-title">{{s.position}}</h4>
+					<h5 class="card-subtitle text-muted">{{s.name}}</h5>
+					<p class="card-text" ng-show="{{s.email}}">
+						Contact: <small class="text-muted"><a target="_blank"
+							href=https://mail.google.com/mail/?view=cm&fs=1&to={{s.email}}>{{s.email}}</a></small>
+					</p>
+					<hr class="hr-short">
+					<p class="card-text">{{s.bio}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</uib-tab> </uib-tabset>
+</div>

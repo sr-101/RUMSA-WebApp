@@ -1,0 +1,39 @@
+<div class="container">
+<header>
+	<div class="header-content" style="padding-bottom:0px">
+		<div class="header-content-inner">
+			<h3 class="display-5">
+				EBoard Edit Page
+			</h3>
+		</div>
+	</div>
+</header>
+<hr>
+<section>
+	<div id="alert_placeholder"></div>
+	<button type="button" class="btn btn-primary" ng-click="vm.newmember()">Add</button>
+	<br>
+	<br>
+	<div class="container offset-xs-1">
+	<div ng-form="mainform">
+	<div class="card-deck">
+			<div class="card text-xs-center col-lg-4 col-md-6 col-sm-12 col-xs-12" ng-repeat="m in vm.eboard">
+            <ng-form name="subform">
+				<button type="button" class="btn btn-secondary" ng-click="vm.deletemember(m.id)"><span class="fa fa-times" aria-hidden="true"></span></button>
+				<br>
+				<img class="card-img-top" ng-src={{m.img}} ng-model="m.img" alt="Card image cap" style="height: 200px">
+				<div class="card-block">
+					<input type="text" class="card-title form-control" placeholder="Position" value="{{m.position}}" ng-model="m.position" required>
+					<input type="text" class="card-subtitle form-control" placeholder="Name" value="{{m.name}}" ng-model="m.name" required>
+					<p class="card-text">Contact: <small class="text-muted"><input type="text" class="form-control" placeholder="Email" value="{{m.email}}" ng-model="m.email" required></small></p>
+					<hr class="hr-short">
+					<textarea class="card-text form-control" rows="5" placeholder="Bio" ng-model="m.bio" required>{{m.bio}}</textarea>
+					<br>
+					<button type="button" class="btn btn-secondary" ng-click="addupdate(m)" ng-disabled="(m.name||m.position||m.email||m.img||m.bio) ?  false : true">Submit</button>
+				</div>
+			</ng-form>
+			</div>
+		</div>
+	</div>
+</section>
+</div>

@@ -2,3 +2,6 @@
 *.htaccess
 bower_components/
 .settings/
+target/
+img/
+META-INF/

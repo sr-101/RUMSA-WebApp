@@ -1,0 +1,72 @@
+<header>
+	<div class="header-content">
+		<div class="header-content-inner">
+		<div class="row">
+		<div class="col-md-6 container">
+			<h1 class="display-5 text-xs-center">
+				Rutgers New Brunswick<br>Muslim Student Association
+			</h1>
+			<hr class="hr-short">
+			<div class="container">
+				<div class="row">
+					<p>
+						Assalamualaikum, RU-MSA Welcomes You! Peace and blessings on
+						to you! Feel free to browse our website to learn more about
+						RU-MSA, explore our initiatives, check out our events, and find
+						information about Muslim life on campus (prayer spaces, places to
+						eat, etc.). If you have any questions or comments, don't
+						hesitate to contact us!
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-5">
+				<div class="row col-md-12">
+					<div ng-controller="EventsController">
+					    <div uib-carousel active="$index" interval="2000" no-wrap="false">
+					      <div uib-slide ng-repeat="fb in eventsc" index="$index">
+					        <div><img ng-src="{{fb.cover}}"></div>
+					      </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+			</div>
+</header>
+<hr>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-heading">Who We Are: </h2>
+				<hr class="hr-short">
+				<p>RU-MSA strives, but does not limit itself, to create and raise awareness on the basis of understanding Islam on campus, as well as fostering a sense of community and brotherhood/sisterhood among Muslims. The MSA also promotes appreciation of the core Islamic teachings to both Muslims and non-Muslims through its events and activities.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2 text-center">
+				<p>
+					<a target="_blank" href="http://facebook.com/rutgersmsa"><i class="fa fa-facebook-square fa-2x"></i></a>
+				</p>
+			</div>
+			<div class="col-lg-2 text-center">
+				<p>
+					<a target="_blank" href="http://twitter.com/rutgersmsa"><i class="fa fa-twitter-square fa-2x"></i></a>
+				</p>
+			</div>
+			<h4 class="col-lg-4 text-center section-heading">Check Us Out on Social Media</h4>
+			<div class="col-lg-2 text-center">
+				<p>
+					<a target="_blank" href="http://snapchat.com/add/rutgersmsa"><i class="fa fa-snapchat-square fa-2x"></i></a>
+				</p>
+			</div>
+			<div class="col-lg-2 text-center">
+				<p>
+					<a target="_blank" href="http://instagram.com/rutgersmsa"><i class="fa fa-instagram fa-2x"></i></a>
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

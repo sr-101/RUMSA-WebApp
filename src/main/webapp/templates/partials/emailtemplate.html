@@ -1,0 +1,47 @@
+	<div class="container">
+	<header>
+		<div class="header-content" style="padding-bottom:0px">
+			<div class="header-content-inner">
+				<h1 class="display-5">
+					RU-MSA Upcoming Events!
+				</h1>
+			</div>
+		</div>
+	</header>
+	<div class="row">
+				<div class="col-lg-12 text-center">
+					<h4 class="section-heading">Check Us Out on Social Media:</h4>
+				</div>
+			</div>
+	        <center>
+			<table>
+				<a target="_blank" href="http://facebook.com/rutgersmsa"><img src="https://gallery.mailchimp.com/36f77e6c356d72cd9cecdc02f/images/39cea5c2-4861-47f9-a9e8-1f8dbaa1f46b.png"></a>
+	            &nbsp;
+				<a target="_blank" href="http://twitter.com/rutgersmsa"><img src="https://gallery.mailchimp.com/36f77e6c356d72cd9cecdc02f/images/06d8bfde-3df7-4857-945b-160f4eb31fde.png"></a>
+				&nbsp;
+	            <a target="_blank" href="http://snapchat.com/add/rutgersmsa"><img src="https://gallery.mailchimp.com/36f77e6c356d72cd9cecdc02f/images/8e9eae89-9ab4-4dfc-8647-6d18892f5563.png"></a>
+	            &nbsp;
+	            <a target="_blank" href="http://instagram.com/rutgersmsa"><img src="https://gallery.mailchimp.com/36f77e6c356d72cd9cecdc02f/images/5dd28c4a-7cda-4a2f-957c-00c2e8789072.png"></a>
+			</table>
+	        </center>
+	<hr>
+	<p style="text-align:center">
+	Reminder: <a href="https://sabo.tix.com/Event.aspx?EventCode=919138">GET YOUR R2R TICKETS BEFORE THEY SELL OUT COMPLETELY!</a>
+	</p>
+	<hr>
+	<section>
+		<div class="container">
+			<div class="card text-xs-center col-xs-10 offset-xs-1" ng-repeat="fb in vm.events" ng-show="vm.events">
+					<a target="_blank" ng-href="https://www.facebook.com/events/{{fb.id}}"><img class="card-img-top img-responsive" ng-src={{fb.cover}} alt="Card image cap"></a> 
+					<div class="card-block">
+						<a target="_blank" ng-href="https://www.facebook.com/events/{{fb.id}}"><h4 class="card-title">{{fb.name}}</h4></a>
+						<h5 class="card-subtitle text-muted">{{fb.place.name}}</h5> 
+						<h5 class="card-subtitle text-muted" ng-show="fb.place.location.zip"><br> Address: {{fb.place.location.street}}, {{fb.place.location.city}}, {{fb.place.location.state}}, {{fb.place.location.zip}}</h5>
+						<p class="card-text">{{fb.start_time|date:"MMMM dd, yyyy h:mma"}} - {{fb.end_time|date:"h:mma"}}</p>
+						<hr class="hr-short">
+						<p class="card-text">{{fb.description}}</p>
+					</div>
+				</div>
+		</div>
+	</section>
+	</div>

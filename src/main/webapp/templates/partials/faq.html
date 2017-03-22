@@ -1,0 +1,26 @@
+<div class="container">
+<header>
+	<div class="header-content" style="padding-bottom:0px">
+		<div class="header-content-inner">
+			<h3 class="display-5">
+				Frequently Asked Questions
+			</h3>
+		</div>
+	</div>
+</header>
+<hr>
+<section>
+	<div class="container">
+		<div class="card" ng-repeat="f in vm.faqs">
+		  <div class="card-header">
+		    {{f.q}}
+		  </div>
+		  <div class="card-block">
+		    <blockquote class="card-blockquote">
+		      <p>{{f.a}}</p>
+		      </blockquote>
+		  </div>
+		</div>
+	</div>
+</section>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+<header>
+	<div class="header-content" style="padding-bottom:0px">
+		<div class="header-content-inner">
+			<h3 class="display-5">
+				EBoard
+			</h3>
+		</div>
+	</div>
+</header>
+<hr>
+<section>
+	<div class="container">
+	<div class="card-deck">
+			<div class="card text-xs-center col-lg-4 col-md-6 col-sm-12 col-xs-12" ng-repeat="s in vm.eboard">
+				<img class="card-img-top" ng-src={{s.img}} alt="Card image cap" style="height: 200px">
+				<div class="card-block">
+					<h4 class="card-title">{{s.position}}</h4>
+					<h5 class="card-subtitle text-muted">{{s.name}}</h5>
+					<p class="card-text">Contact: <small class="text-muted"><a target="_blank" href=https://mail.google.com/mail/?view=cm&fs=1&to={{s.email}}>{{s.email}}</a></small></p>
+					<hr class="hr-short">
+					<p class="card-text">{{s.bio}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</div>

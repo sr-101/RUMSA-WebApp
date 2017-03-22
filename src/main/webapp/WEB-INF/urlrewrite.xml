@@ -1,0 +1,8 @@
+<urlrewrite>
+<rule match-type="regex">
+    <condition type="request-uri" operator="notequal">^/(index.html|bower_components|rest)</condition>
+    <condition type="request-uri" operator="notequal">.*\.(css|js|html|png|jpg|jpeg|gif|txt|ttf|json|woff|ico)$</condition>
+    <from>^/(.*)$</from>
+    <to type="passthrough">/index.html</to>
+</rule>
+</urlrewrite>

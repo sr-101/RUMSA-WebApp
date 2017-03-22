@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>RU MSA</title>
+    
+	<base href="/">
+	
+    <!-- Basic style -->
+    <link href="./static/bower_components/bootstrap/dist/css/bootstrap-flex.min.css" rel="stylesheet" />
+    <link href="./static/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="./static/css/app.css" rel="stylesheet" />
+    
+
+    <script type="text/javascript" src="./static/js/auth0-variables.js"></script>
+    <script type="text/javascript" src="./static/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="./static/bower_components/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="./static/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="./static/bower_components/auth0-lock/build/lock.js"></script>
+    <script type="text/javascript" src="./static/bower_components/angular-lock/dist/angular-lock.js"></script>
+    <script type="text/javascript" src="./static/bower_components/angular-jwt/dist/angular-jwt.js"></script>
+    <script type="text/javascript" src="./static/bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="./static/js/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script type="text/javascript" src="./static/js/PrayTimes.js"></script> 
+    <script type="text/javascript" src="./static/js/app.js"></script>
+    <script type="text/javascript" src="./static/js/app.run.js"></script>
+    <script type="text/javascript" src="./static/js/services/auth.service.js"></script>
+    <script type="text/javascript" src="./static/js/services/model.services.js"></script>
+    <script type="text/javascript" src="./static/js/services/http.service.js"></script>
+    <script type="text/javascript" src="./static/js/controllers/navbar.controller.js"></script>
+    <script type="text/javascript" src="./static/js/controllers/home.controller.js"></script>
+    <script type="text/javascript" src="./static/js/controllers/prayerinfo.controller.js"></script> 
+    <script type="text/javascript" src="./static/js/controllers/faq.controller.js"></script>
+    <script type="text/javascript" src="./static/js/controllers/events.controller.js"></script>
+    <script type="text/javascript" src="./static/js/controllers/eboard.controller.js"></script>
+    <script type="text/javascript" src="./static/js/controllers/eboardedit.controller.js"></script>
+    <script type="text/javascript" src="./static/js/controllers/initiatives.controller.js"></script>
+	<script type="text/javascript" src="./static/js/controllers/modal.controller.js"></script> 
+	<script type="text/javascript" src="./static/js/controllers/fmodal.controller.js"></script>   
+  </head>
+  
+  <body>
+    <div ng-app="myApp">
+    	<div ui-view="header"></div>
+		<div autoscroll="true" ui-view="content">
+		<div ui-view="footer"></div>
+    </div>
+  </body>
+</html>

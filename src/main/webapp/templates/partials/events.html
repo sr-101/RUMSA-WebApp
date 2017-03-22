@@ -1,0 +1,28 @@
+<div class="container" id="events">
+<header>
+	<div class="header-content" style="padding-bottom:0px">
+		<div class="header-content-inner">
+			<h3 class="display-5">
+				Upcoming Events
+				
+			</h3>
+		</div>
+	</div>
+</header>
+<hr>
+<section>
+	<div class="container">
+		<div class="card text-xs-center col-xs-10 offset-xs-1" ng-repeat="fb in vm.events" ng-show="vm.events">
+				<a target="_blank" ng-href="https://www.facebook.com/events/{{fb.id}}"><img class="card-img-top img-responsive" ng-src={{fb.cover}} alt="Card image cap"></a> 
+				<div class="card-block">
+					<a target="_blank" ng-href="https://www.facebook.com/events/{{fb.id}}"><h4 class="card-title">{{fb.name}}</h4></a>
+					<h6 class="card-subtitle text-muted">{{fb.place.name}}</h6> 
+					<h6 class="card-subtitle text-muted" ng-show="fb.place.location.zip"><br> Address: {{fb.place.location.street}}, {{fb.place.location.city}}, {{fb.place.location.state}}, {{fb.place.location.zip}}</h5>
+					<p class="card-text">{{fb.start_time|date:"MMMM dd, yyyy h:mma"}} - {{fb.end_time|date:"h:mma"}}</p>
+					<hr class="hr-short">
+					<p class="card-text">{{fb.description}}</p>
+				</div>
+			</div>
+	</div>
+</section>
+</div>

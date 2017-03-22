@@ -1,0 +1,29 @@
+<div class="container" ng-controller="NavBarController as vm">
+	<nav class="navbar navbar-fixed-top navbar-light">
+		<div class="navbar-header">
+        	<a class="navbar-brand" ui-sref="base.home">RU-MSA</a>
+        </div>
+		<div class="nav navbar-nav">
+			<a class="nav-item nav-link active" ui-sref="base.home">Home <span class="sr-only">(current)</span></a>
+			<a class="nav-item nav-link active" ui-sref="base.eboard">EBoard</a>
+			<a class="nav-item nav-link active" ui-sref="base.prayerinfo">Prayer Info</a>
+			<a class="nav-item nav-link active" ui-sref="base.faq">FAQ</a>
+			<a class="nav-item nav-link active" ui-sref="base.events">Events</a>
+			<a class="nav-item nav-link active" ui-sref="base.initiatives">Initiatives</a>
+			<a ng-show="isAuthenticated" class="nav-item nav-link" ui-sref="base.auth-eboard">Shura</a>
+			<a ng-show="!isAuthenticated" class="nav-item nav-link" ui-sref="base.home" ng-click="authService.login()">Log In</a>
+			<a ng-show="isAuthenticated" class="nav-item nav-link" ui-sref="base.home" ng-click="authService.logout()">Log Out</a>
+		</div>
+		<div class="nav navbar nav" style="float: right">
+			<label>{{vm.date}}</label>
+			&nbsp;
+			<small>
+			<b>Fajr:</b> {{vm.prayertimes.fajr}}
+			<b>Dhuhr:</b> {{vm.prayertimes.dhuhr}}
+			<b>Asr:</b> {{vm.prayertimes.asr}}
+			<b>Maghrib:</b> {{vm.prayertimes.maghrib}}
+			<b>Isha:</b> {{vm.prayertimes.isha}}
+			</small>
+		</div>
+	</nav>
+</div>

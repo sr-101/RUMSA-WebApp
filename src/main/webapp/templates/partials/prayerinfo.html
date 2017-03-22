@@ -1,0 +1,22 @@
+<div class="container">
+	<header>
+		<div class="header-content" style="padding-bottom: 0px">
+			<div class="header-content-inner">
+				<h3 class="display-5">Where to Pray?</h3>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<section>
+	<div class="container-fluid">
+		<div class="card-deck">
+			<div class="card prayer" ng-repeat="pi in vm.prayerlocs">
+				<div class="card-block">
+					<h4 class="card-title">{{pi.campus}}</h4>
+					<p class="card-text" ng-repeat="loc in pi.locs">{{loc}}</p>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+</div>
